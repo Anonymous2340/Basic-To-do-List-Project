@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 0 0 70px 0;
+    border-radius: 7px;
+    background: white;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.container .header {
+    width: inherit;
+    height: auto;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .task-name-container {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.task-name-container label {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #3e3e44;
+    position: absolute;
+    left: 10px;
+    background: white;
+    padding: 0 5px;
+    transition-property: transform font-size;
+    transform: translateY(0);
+}
+
+.task-name-container input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border: 1px solid black;
+    outline: none;
+    background: white;
+    padding: 23px 50px 23px 25px;
+    font-size: 1.1em;
+    border-radius: 3px;
+}
+
+.task-name-container i {
+    position: absolute;
+    right: 5px;
+    color: green;
+    font-size: 2em;
+}
+
+input:not(:placeholder-shown) + label, input:focus + label{
+    font-size: 1em;
+    transform: translateY(-120%);
+}
+
+.task-name-container label {
+    transition: 0.3s ease-in-out;
+}
+
+.task-list {
+    width: 500px;
+    height: auto;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #ccc00030;
+    padding: 20px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+}
+
+.task-list .task {
+    width: 100%;
+    padding: 10px;
+}
+
+.task-list i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5em;
+    color: red;
+}
+
+.task-list .labels {
+    font-size: 0.9em;
+    font-weight: 700;
+    position: relative;
+}
+
+.labels:hover span {
+    text-decoration: underline;
+}
+
+.task-list .descriptions {
+    margin: 10px 2px;
+    padding: 5px 7px;
+    border-left: 2px solid black;
+}
+
+/* responsive designing */
+/* dimensiong: iPhone SE */
+@media screen and (max-width: 400px) {
+    .container {
+        width: 100vw;
+        font-size: 0.7em
+    }
+
+    input:not(:placeholder-shown) + label, input:focus + label {
+        transform: translateY(-150%);
+        font-size: 1.1em;
+    }
+
+    .header input {
+        font-size: 1.3em;
+    }
+
+    .task-list {
+        width: 80vw;
+        font-size: 0.8em;
+    }
+
+    .task .descriptions {
+        font-size: 1.1em;
+    }
+}
+
+/* responsive designing */
+/* dimensiong: iPhone XR */
+@media screen and (max-width: 430px) {
+    .container {
+        width: 100vw;
+        font-size: 0.8em
+    }
+
+    input:not(:placeholder-shown) + label, input:focus + label {
+        transform: translateY(-150%);
+        font-size: 1em;
+    }
+
+    .header input {
+        font-size: 1.3em;
+    }
+
+    .task-list {
+        width: 80vw;
+        font-size: 1em;
+    }
+
+    .task .descriptions {
+        font-size: 1.1em;
+    }
+}
+
+
+/* iPad Mini */
+@media screen and (max-width: 780px) {
+    .container {
+        width: 90vw;
+        font-size: 0.9em;
+    }
+
+    input:not(:placeholder-shown) + label, input:focus + label {
+        transform: translateY(-120%);
+        font-size: 1.2em;
+    }
+
+    .header input {
+        font-size: 1.5em;
+    }
+
+    .task-list {
+        width: 80vw;
+        font-size: 1.3em;
+    }
+
+    .task .descriptions {
+        font-size: 1.25em;
+    }
+}

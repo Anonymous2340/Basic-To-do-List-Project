@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Basic To-do List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="task-name-container">
+                <input type="text" name="tast" spellcheck="false" id="task-name" placeholder=" " autocomplete="off">
+                <label for="task-name">What is you're task today?</label>
+                <i aria-hidden="true" class="fa-regular fa-square-plus"></i>
+            </div>
+        </div>
+    </div>
+    <div class="task-list">
+        <div class="task">
+            <i aria-hidden="true" class="fa-solid fa-xmark" ></i>
+            <div class="labels">
+                <span class="label">
+                    • Tue 7, 2024, 5:00pm: Task 1
+                  </span>
+            </div>
+            <div class="descriptions">
+                "Hello World!"
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
